@@ -7,7 +7,7 @@ import { createStore, applyMiddleware } from 'redux';
 import reduxThunk from 'redux-thunk';
 
 import App from './containers/App';
-import reducers from './data/reducers';
+import reducers from './rootReducer';
 //import registerServiceWorker from './registerServiceWorker';
 
 const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
@@ -20,5 +20,3 @@ ReactDOM.render(
   <Provider store={store}><App /></Provider>,
   document.querySelector('#root')
 );
-
-

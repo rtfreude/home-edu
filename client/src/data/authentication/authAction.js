@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { FETCH_USER } from './types';
+const FETCH_USER = 'fetch_user';
 
 export const fetchUser = () => async dispatch => {
   console.log('Response from fetchUser')

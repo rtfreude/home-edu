@@ -1,6 +1,6 @@
-import { FETCH_USER } from '../actions/types';
+const FETCH_USER = 'fetch_user';
 
-export default function (state = null, action) {
+export function AuthReducer(state = null, action) {
   console.log('THIS IS THE REDUCER TYPE')
   console.log(action)
   switch (action.type) {

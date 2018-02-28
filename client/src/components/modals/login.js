@@ -21,7 +21,7 @@ class LogModal extends Component {
           </div>
         </Modal.Body>
         <Modal.Footer>
-            <Button bsStyle="info" class="customButton" onClick={this.props.close}>Close</Button>
+            <Button bsStyle="info" className="customButton" onClick={this.props.close}>Close</Button>
           </Modal.Footer>
       </Modal.Dialog>
     );

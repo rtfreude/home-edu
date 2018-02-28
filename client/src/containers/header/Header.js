@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import './header.css';
-import LogModal from '../modals/login'
+import LogModal from '../../components/modals/login'
 
 class Header extends Component {
   constructor(props) {
@@ -22,19 +22,15 @@ class Header extends Component {
     this.setState({showModal: true});
   }
 
-  handleHide() {
-    this.setState({ showModal: false });
-  }
-
   renderContent() {
 
-    switch (this.props.auth) {
+    switch (this.props.AuthReducer) {
       case null:
         return;
       case false:
         return (
                 <div>
-                <a bsStyle="info" onClick={this.open}><i className="material-icons right">menu</i>Login</a>
+                <a onClick={this.open}><i className="material-icons right">menu</i>Login</a>
                 </div>
                )
       default:
@@ -49,15 +45,12 @@ class Header extends Component {
   }
 
   render() {
-    console.log('THIS IS THE PROPS AND STATE')
-    console.log(this.props)
-    console.log(this.state)
     return (
       <div>
        <nav className="header-nav">
         <div className="nav-wrapper black">
           <Link
-            to={this.props.auth ? '/dashboard' : '/'}
+            to={this.props.AuthReducer ? '/dashboard' : '/'}
             className="left brand-logo"
             >
             School Day My Way
@@ -80,8 +73,8 @@ class Header extends Component {
     )
   }
 }
-function mapStateToProps({ auth }) {
-  return { auth }
+function mapStateToProps({ AuthReducer }) {
+  return { AuthReducer }
 }
 
 export default connect(mapStateToProps)(Header)

@@ -4,9 +4,7 @@ import './landing.css'
 class Landing extends Component {
   render() {
     return (
-      <div className='landing-container'>
-
-      </div>
+      <div className='landing-container'></div>
     )
   }
 }
