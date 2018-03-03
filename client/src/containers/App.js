@@ -5,8 +5,8 @@ import { AuthAction } from '../data/authentication/index';
 
 import Landing from '../components/landing/Landing';
 import HeaderContainer from './header/HeaderContainer';
-import Calendar from '../containers/calendar/Calendar';
-import DailyLesson from '../containers/daily_lesson/DailyLesson';
+import Calendar from '../containers/calendar/CalendarContainer';
+import DailyLesson from '../containers/dailyLesson/DailyLessonContainer';
 
 class App extends Component {
 

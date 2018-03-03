@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class DailyLesson extends Component {
+class DailyLessonContainer extends Component {
   render() {
     return (
       <div>DAILY LESSON</div>
@@ -8,4 +8,4 @@ class DailyLesson extends Component {
   }
 }
 
-export default DailyLesson;
+export default DailyLessonContainer;
