@@ -1,5 +1,5 @@
 import AuthReducer from './authReducer';
-//import * as CallSelectors from './CallSelectors';
+//import * as authSelectors from './authSelectors';
 import * as AuthAction from './authAction';
 
 export {

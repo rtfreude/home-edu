@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-//import { connect } from 'react-redux';
-import './header.css';
+
 import LogModal from '../modals/login'
+
+import './header.css';
 
 class Header extends Component {
   constructor(props) {
@@ -45,8 +46,6 @@ class Header extends Component {
   }
 
   render() {
-    console.log('this is the header props')
-    console.log(this.props)
     return (
       <div>
        <nav className="header-nav">

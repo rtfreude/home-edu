@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Modal, Button } from 'react-bootstrap'
+
 import './modal.css'
 
 var injectTapEventPlugin = require("react-tap-event-plugin");
