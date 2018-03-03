@@ -6,7 +6,9 @@ import { connect } from 'react-redux'
 import { AuthAction } from '../data/authentication/index';
 
 import Landing from '../components/landing/Landing';
-import Header from './header/Header';
+import HeaderContainer from './header/HeaderContainer';
+import Calendar from '../containers/calendar/Calendar';
+import DailyLesson from '../containers/daily_lesson/DailyLesson';
 
 import './App.css'
 
@@ -17,13 +19,14 @@ class App extends Component {
   }
 
   render() {
-    console.log(AuthAction)
     return (
       <div className='app-container'>
         <BrowserRouter>
           <div>
-            <Header />
+            <HeaderContainer />
             <Route exact path='/' component={Landing} />
+            <Route exact path='/calendar' component={Calendar} />
+            <Route exact path='/daily_lesson' component={DailyLesson} />
           </div>
         </BrowserRouter>
       </div>

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+//import { connect } from 'react-redux';
 import './header.css';
-import LogModal from '../../components/modals/login'
+import LogModal from '../modals/login'
 
 class Header extends Component {
   constructor(props) {
@@ -24,7 +24,7 @@ class Header extends Component {
 
   renderContent() {
 
-    switch (this.props.AuthReducer) {
+    switch (this.props.auth) {
       case null:
         return;
       case false:
@@ -36,8 +36,8 @@ class Header extends Component {
       default:
         return (
                 <div>
-                  <li><Link to='/beer'>Search Beer</Link></li>
-                  <li><Link to='/breweries'>Search Breweries</Link></li>
+                  <li><Link to='/calendar'>Calendar</Link></li>
+                  <li><Link to='/daily_lesson'>Daily Lessons</Link></li>
                   <li><a href="/api/logout">Logout</a></li>
                 </div>
                 )
@@ -45,15 +45,17 @@ class Header extends Component {
   }
 
   render() {
+    console.log('this is the header props')
+    console.log(this.props)
     return (
       <div>
        <nav className="header-nav">
         <div className="nav-wrapper black">
           <Link
-            to={this.props.AuthReducer ? '/dashboard' : '/'}
+            to={this.props.auth ? '/dashboard' : '/'}
             className="left brand-logo"
             >
-            School Day My Way
+            School Day My Way!
           </Link>
           <ul className="right">
               {this.renderContent()}
@@ -73,8 +75,5 @@ class Header extends Component {
     )
   }
 }
-function mapStateToProps({ AuthReducer }) {
-  return { AuthReducer }
-}
 
-export default connect(mapStateToProps)(Header)
+export default Header
