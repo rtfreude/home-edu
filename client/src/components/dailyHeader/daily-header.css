@@ -1,0 +1,19 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  background-color: red;
+  justify-content: center;
+  width: 100%;
+}
+
+.daily-header-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.daily-header-text {
+  font-size: 1.5em;
+  max-width: 50%;
+  margin: 0;
+}

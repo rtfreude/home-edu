@@ -6,7 +6,7 @@ import { AuthAction } from '../data/authentication/index';
 import Landing from '../components/landing/Landing';
 import HeaderContainer from './header/HeaderContainer';
 import Calendar from '../containers/calendar/CalendarContainer';
-import DailyLesson from '../containers/dailyLesson/DailyLessonContainer';
+import DailyLessonContainer from '../containers/dailyLesson/DailyLessonContainer';
 
 class App extends Component {
 
@@ -22,7 +22,7 @@ class App extends Component {
             <HeaderContainer />
             <Route exact path='/' component={Landing} />
             <Route exact path='/calendar' component={Calendar} />
-            <Route exact path='/daily_lesson' component={DailyLesson} />
+            <Route exact path='/daily_lesson' component={DailyLessonContainer} />
           </div>
         </BrowserRouter>
       </div>
