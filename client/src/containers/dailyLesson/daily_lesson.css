@@ -1,7 +1,5 @@
-.landing-container {
-  background-image: url("school_landing.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-
+.tab-container {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
 }
